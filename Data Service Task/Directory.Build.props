@@ -1,0 +1,19 @@
+<Project>
+
+  <PropertyGroup>
+    <!-- Shared across all projects in this repo -->
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <!-- Enable all .NET analyzer rules; tune per-project or via .editorconfig -->
+    <AnalysisMode>All</AnalysisMode>
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+
+    <!-- Enforce .editorconfig style rules as build diagnostics -->
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+
+    <!-- Null-safety violations break the build -->
+    <WarningsAsErrors>CS8600;CS8602;CS8603;CS8604;CS8618;CS8625</WarningsAsErrors>
+  </PropertyGroup>
+
+</Project>
