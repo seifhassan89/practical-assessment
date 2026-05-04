@@ -1,7 +1,7 @@
 import type { ValidationSchema } from '@/shared/hooks/useFormValidation';
 import {
   emailFormat,
-  minLength,
+  passwordMinLength,
   required,
 } from '@/shared/hooks/useFormValidation';
 
@@ -19,6 +19,6 @@ export const loginValidationSchema: ValidationSchema<LoginFormValues> = {
   ],
   password: [
     required('Password is required'),
-    minLength(8, 'Password must be at least 8 characters'),
+    passwordMinLength(),
   ],
 };

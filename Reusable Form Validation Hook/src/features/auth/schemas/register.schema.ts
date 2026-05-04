@@ -3,6 +3,7 @@ import {
   emailFormat,
   matchesField,
   minLength,
+  passwordMinLength,
   required,
 } from '@/shared/hooks/useFormValidation';
 
@@ -26,7 +27,7 @@ export const registerValidationSchema: ValidationSchema<RegisterFormValues> = {
   ],
   password: [
     required('Password is required'),
-    minLength(8, 'Password must be at least 8 characters'),
+    passwordMinLength(),
   ],
   confirmPassword: [
     required('Confirm password is required'),

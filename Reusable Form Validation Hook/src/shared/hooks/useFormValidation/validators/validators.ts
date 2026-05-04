@@ -1,4 +1,5 @@
 import type { Validator } from '../useFormValidation.types';
+import { env } from '@/shared/config/env';
 
 export function required<TValues>(
   message = 'This field is required'
@@ -55,4 +56,10 @@ export function matchesField<
   return (value, values) => {
     return value === values[fieldName] ? null : message;
   };
+}
+
+export function passwordMinLength<TValues>(
+  message = `Password must be at least ${env.passwordMinLength} characters`
+): Validator<string, TValues> {
+  return minLength(env.passwordMinLength, message);
 }
