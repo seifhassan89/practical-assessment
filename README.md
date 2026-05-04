@@ -1,6 +1,6 @@
 # Sanna Commerce Assessment
 
-This workspace contains implementations for the 2 main assignments:
+This workspace contains the following implementations:
 
 ## Assignment 1: Data Service Abstraction (C#)
 
@@ -32,6 +32,21 @@ How to use:
 
 1. Run `sql-tables-create.sql` to create and populate the tables.
 2. Run either upsert script to synchronize `PurchasesSnapshot` with `Purchases`.
+
+## Reusable Form Validation Hook (React + TypeScript)
+
+- Project: `Reusable Form Validation Hook`
+- Vite app demonstrating a reusable `useFormValidation` hook (validators + engine), login/register with mock auth and route guards, shared UI (Button, Card, FormField, ErrorSummary), accessible form patterns, Tailwind + SCSS, ESLint/Prettier, Husky + lint-staged + Commitlint.
+
+Run:
+
+- `cd Reusable Form Validation Hook`
+- `npm install`
+- `npm run dev`
+
+Optional:
+
+- `npm run quality` — lint, type-check, and production build
 
 ---
 
