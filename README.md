@@ -2,6 +2,8 @@
 
 This workspace contains the following implementations:
 
+
+
 ## Assignment 1: Data Service Abstraction (C#)
 
 - Project: `Data Service Task/DataService.Api`
@@ -49,4 +51,22 @@ Optional:
 - `npm run quality` — lint, type-check, and production build
 
 ---
+## Assignment 4: Caching Console App (.NET 8)
 
+- Project: `Caching Console App`
+- Detailed documentation: `Caching Console App/README.md`
+- Demonstrates a layered .NET 8 console application that integrates a Star Wars API client with a configurable in-memory cache.
+- Includes pluggable FIFO and LRU eviction strategies, decorator-based cache instrumentation, dependency injection, strongly typed options with validation, and structured logging with Serilog.
+- Supports both an automatic demo flow and an interactive mode for observing cache hits, misses, and evictions at runtime.
+
+Run:
+
+- `cd Caching Console App`
+- `dotnet build CachingConsoleApp.sln`
+- `dotnet run --project .\src\CacheImplementation.Console\CacheImplementation.Console.csproj`
+
+Optional Docker run:
+
+- `cd Caching Console App`
+- `docker build -t caching-console-app .`
+- `docker run --rm -it caching-console-app`
